@@ -111,7 +111,7 @@ services:
     volumes:
       - celery-beat:/home/wger/beat/
     env_file:
-      - ./config/prod.env
+      - ${APP_DATA_DIR}/config/prod.env
     depends_on:
       celery_worker:
         condition: service_healthy
